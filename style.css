@@ -5,6 +5,8 @@ html, body {
     padding: 0;
     background-color: #ffffff;
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 nav {
@@ -12,7 +14,9 @@ nav {
     padding: 1em;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     grid-area: nav;
+    width: 100%;
 }
+
 
 nav ul {
     list-style-type: none;
@@ -54,7 +58,7 @@ nav ul li:nth-child(1)::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg,#ff6347, #ff4500); /* Grön färg för "Hem" */
+    background: linear-gradient(120deg,#ff775f, #ff4500); /* Grön färg för "Hem" */
     transition: left 0.5s ease;
     z-index: 1;
     border-radius:190px;
@@ -72,7 +76,7 @@ nav ul li:nth-child(2)::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, yellow, #dcdcdc); /* Vit färg för "Fakta" */
+    background: linear-gradient(120deg, #dcdcdc, yellow); /* Vit färg för "Fakta" */
     transition: left 0.5s ease;
     z-index: 1;
     border-radius:190px;
@@ -101,6 +105,22 @@ nav ul li:nth-child(3):hover::before {
     left: 0;
 }
 
+nav ul li:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,#cacaca, #ffffff); /* Röd färg för "Destinationer" */
+    transition: left 0.5s ease;
+    z-index: 1;
+    border-radius: 190px;
+}
+
+nav ul li:nth-child(4):hover::before {
+    left: 0;
+}
 .grid-container {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -114,7 +134,7 @@ nav ul li:nth-child(3):hover::before {
 }
 
 header {
-    background-image: url('img/citadel.jpg'); 
+    background-image: url('img/header.png'); 
     background-size: cover;
     background-position: center;
     color: white;
@@ -122,17 +142,19 @@ header {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     text-align: center;
     grid-area: header;
+    width: 100%; 
   
 }
 
 main {
     grid-area: main;
     padding: 0px;
-    background-image: url('img/natur.png'); /* Sätt filvägen till din bild */
+    background-image: url('img/natur.png'); 
     background-size: cover; /* Fyll hela main-sektionen */
-    background-position: center; /* Centrera bilden */
+    background-position: cover; /* Centrera bilden */
     background-repeat: no-repeat; /* Undvik upprepning av bilden */
-    min-height: 100%;
+    height: 100vh;
+    width: 100vw; 
 }
 
 header h1 {
@@ -176,7 +198,7 @@ button {
 
 /* Animerade sektioner */
 .fact-section, .destination-section {
-    margin: 40px auto;
+    margin: 30px auto;
     width: 80%;
     padding: 20px;
     background-color: #ffffffb9;
@@ -189,14 +211,7 @@ button {
     box-shadow: 0 2px 10px rgba(10, 10, 10, 10);
 }
 
-.food-image {
-    width: 20%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-
-}
-
-.fact-section:hover, .destination-section:hover, button:hover {
+.fact-section:hover, .destination-section:hover, .weather-info:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -234,7 +249,7 @@ footer {
     background-color: rgb(158, 115, 49, 0.411);
     text-align: center;
     padding: 20px;
-    position: fixed; /* Placera footern längst ner */
+    position: bottom; /* Placera footern längst ner */
     bottom: 0;
     width: 100%; /* Se till att den fyller sidans bredd */
     margin: 0;
