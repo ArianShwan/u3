@@ -127,13 +127,12 @@ header {
 
 main {
     grid-area: main;
-    padding: 20px;
+    padding: 0px;
     background-image: url('img/natur.png'); /* Sätt filvägen till din bild */
     background-size: cover; /* Fyll hela main-sektionen */
     background-position: center; /* Centrera bilden */
     background-repeat: no-repeat; /* Undvik upprepning av bilden */
-    position: relative; /* Gör att child-elementen kan positioneras relativt till main */
-
+    min-height: 100%;
 }
 
 header h1 {
