@@ -211,7 +211,7 @@ button {
     box-shadow: 0 2px 10px rgba(10, 10, 10, 10);
 }
 
-.fact-section:hover, .destination-section:hover, .weather-info:hover {
+.fact-section:hover, .destination-section:hover, .weather-info:hover, .button-container button:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -254,6 +254,21 @@ footer {
     width: 100%; /* Se till att den fyller sidans bredd */
     margin: 0;
 }
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: rgba(158, 114, 49, 0.548);
+}
+
 
 /* Responsiv design */
 @media (max-width: 768px) {
