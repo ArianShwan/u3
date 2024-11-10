@@ -104,7 +104,7 @@ nav ul li:nth-child(3):hover::before {
 .grid-container {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh; 
+    height: 100vh; 
     grid-template-areas:
         "nav"
         "header"
@@ -232,10 +232,12 @@ button {
 }
 
 footer {
-    grid-area: footer;
-    background-color: rgba(158, 115, 49, 0.411);
+    background-color: rgb(158, 115, 49, 0.411);
     text-align: center;
-    padding: 30px;
+    padding: 20px;
+    position: fixed; /* Placera footern längst ner */
+    bottom: 0;
+    width: 100%; /* Se till att den fyller sidans bredd */
     margin: 0;
 }
 
