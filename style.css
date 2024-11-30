@@ -146,6 +146,23 @@ header {
   
 }
 
+.dolma {
+    max-width: 10%; /* Maximal bredd */
+    border-radius: 10px; /* Rundar hörnen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lägg till en skuggeffekt */
+}
+
+.food-info {
+    display: flex; /* Gör så att elementen ligger bredvid varandra */
+    align-items: center; /* Vertikalt centrerar text och bild */
+    gap: 20px; /* Lägger mellanrum mellan texten och bilden */
+}
+
+.food-info p {
+    flex: 1; /* Gör så att texten tar upp all tillgänglig plats */
+    line-height: 1.6; /* Gör texten lättare att läsa */
+}
+
 main {
     grid-area: main;
     padding: 0px;
